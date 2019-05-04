@@ -1,0 +1,38 @@
+注解
+@Override //表示这个函数是复写的
+@Deprecated //表示这个函数不推荐用
+@Suppvisewarnings("deprecation")//忽略对应的警告
+
+Spring下的注解
+@Autowired
+@Service
+@Repository
+
+Mybatis下的注解
+@InsertProvider
+@UpdateProvider
+@Options
+
+源码注解/编译时注解/运行时注解
+
+//反射机制
+Student student;
+Class class = student.class
+Class class = Class.forName("Student")
+class.newInstance()
+class.getMethods()
+class.getDeclaredMethods()
+class.getFields()
+class.getDeclaredFields()
+
+
+//寻找这个类的名叫getName，参数为int，char的方法
+A a = new A();
+Class class = a.getClass();
+Method m = class.getMethod("getName",new Class[]{int.class,char.class})
+Object result = m.invoke(a,new Object[]{10,'5'});
+
+
+//然后可以把这些类转成他们共有的接口或者父类，这样就可以动态加载了
+
+
